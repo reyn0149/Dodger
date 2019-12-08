@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Applying jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Contains the player info and description -->
+    <table>
+        <form name="gameInfo" id="gameInfo">
+        <tr>
+            <td>
+                <h1>Dodger</h1>
+            </td>
+            <td>
+                <p>Use the arrow keys to dodge the fireballs!</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name= "playerName" id="name">
+                <span class="alert" id="nameAlert"> </span>
+            </td>
+        </tr>  
+        </tr>
+        <tr>
+            <td>Difficulty:</td>
+            <td>
+                <select name = "playerDifficulty" id="difficulty">
+                <option value="">Select a difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                </select>
+                <span class="alert" id=difficultyAlert></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" class ="start" value="Summon Fireballs!">
+            </td>
+        </tr>
+        </form>
+    </table>
+    <!-- Game Area -->
+    <canvas width="400" height="400" id="game"></canvas>
+    <!-- Scoreboard -->
+    <div class="row">
+        <div class="col">
+            <h3 class = "playerName">Player Name</h3>
+        </div>
+        <div class = "col">
+            <h3 class = "playerScore">Player Score</h3>
+        </div>
+    </div>
+    <script src="scripts/gameStart.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+</html>
